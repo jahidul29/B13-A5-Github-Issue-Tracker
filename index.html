@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <link rel="icon" type="png" href="./assets/github-logo.png">
+<!-- fond geist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- talwing & daisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+
+<body class="bg-gray-100 pt-10 pb-20">
+    <section class="bg-white shadow-lg w-8/12 mx-auto mt-10 pt-20 rounded-lg">
+<!-- hero section -->
+        <div class="flex flex-col items-center mx-auto space-y-3 ">
+            <img src="./assets/github-logo.png" alt="">
+            <h1 class="text-4xl font-bold">GitHub Issues Tracker</h1>
+            <p class="text-xl font-semibold text-gray-400">Sign in to manage your issues</p>
+        </div>
+<!-- Signup form -->
+        <div class="card mx-auto max-w-sm pt-5 space-y-3">
+          <label class="label font-bold text-lg">Username</label>
+          <input id="user-name" type="email" class="input font-semibold text-lg w-full" placeholder="Enter username" />
+          <p class="text-blue-700">Default: admin</p>
+          <label class="label font-bold text-lg">Password</label>
+          <input id="password" type="password" class="input font-semibold text-lg w-full" placeholder="Enter Password" />
+          <p class="text-blue-700">Default: admin123</p>
+          <button id="signup-btn" class="btn btn-primary mt-4">Sign In</button>
+         </div>
+
+<!-- OR -->
+         <div class="flex items-center gap-4 pt-6 pb-5">
+            <hr class="flex-grow border-gray-200"> 
+            <span class="text-2xt font-bold text-gray-400"> OR </span> 
+            <hr class="flex-grow border-gray-200">
+         </div>
+<!-- credinatian=l -->
+         <div class="flex flex-col items-center mx-auto">
+            <p class="pb-2 text-gray-400 font-semibold">Demo Credentials:</p>
+            <div class="bg-gray-100 rounded w-full max-w-sm flex flex-col items-center p-5 mb-10">
+                <h3 class="text-xl font-semibold text-black">Username: admin</h3>
+                <h3 class="text-xl font-semibold text-black">Password: admin123</h3>
+            </div>
+         </div>
+       
+    </section>
+
+<script src="./index.js"></script>
+</body>
+</html>
