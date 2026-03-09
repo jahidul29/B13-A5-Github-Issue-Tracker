@@ -1,5 +1,3 @@
-const cardContainer = document.getElementById("card-container");
-const issueCount = document.getElementById(issue-count);
 
 
 // tab color change
@@ -28,7 +26,10 @@ async function loadIssues() {
 }
 
 function displayIssues(cards){
+
     const cardsContainer = document.getElementById("card-container");
+    const issueCount = document.getElementById("issue-count");
+
     cards.forEach((card) => {
         const div = document.createElement("div");
         div.innerHTML = `
@@ -57,6 +58,7 @@ function displayIssues(cards){
        cardsContainer.appendChild(div);
        
     });
-    
+    issueCount.innerText = cardsContainer.children.length;
 }
 loadIssues();
+
