@@ -15,20 +15,30 @@ tabBtns.forEach(tbtn => {
         });
 });
 
+const cardsContainer = document.getElementById("card-container");
+const issueCount = document.getElementById("issue-count");
+const spinner = document.getElementById("spinner")
 
+function showSpinner (){
+    spinner.classList.remove("hidden")
+    cardsContainer.classList.add("hidden")
+}
 
+function hideSpinner (){
+    spinner.classList.add("hidden")
+    cardsContainer.classList.remove("hidden")
+}
 
 async function loadIssues() {
+    showSpinner();
     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
 
     const data = await res.json();
     displayIssues(data.data);
+    hideSpinner();
 }
-
+    
 function displayIssues(cards){
-
-    const cardsContainer = document.getElementById("card-container");
-    const issueCount = document.getElementById("issue-count");
 
     cards.forEach((card) => {
         const div = document.createElement("div");
@@ -53,10 +63,8 @@ function displayIssues(cards){
                     <p>${card.createdAt}</p>
                 </div>            
             </div>
-       
         </div>`
        cardsContainer.appendChild(div);
-       
     });
     issueCount.innerText = cardsContainer.children.length;
 }
